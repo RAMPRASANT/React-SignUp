@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import axios from 'axios';
 
-export default class Search extends Component {
+
+ class Signup extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -33,7 +34,7 @@ export default class Search extends Component {
             fieldValidationErrors.email = emailValid ? '' : ' is invalid';
             break;
           case 'password':
-            passwordValid = value.length >= 6;
+            passwordValid = value.length >= 4;
             fieldValidationErrors.password = passwordValid ? '': ' is too short';
             break;
           default:
@@ -56,9 +57,10 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <form onSubmit={this.handleSubmit}>
-        <FormGroup controlId="UserName" bsSize="large">
+        <img src="/public/img/logo.jpg" alt="logo" /><br /><br/>
+        <FormGroup controlId="UserName" bsSize="large" >
             <ControlLabel ><strong>UserName:</strong></ControlLabel><br/><br/>
             <FormControl
               autoFocus
@@ -105,10 +107,14 @@ export default class Search extends Component {
             //disabled={!this.state.formValid}
             type="submit">
             Create your professional account
-          </Button>
+          </Button><br/> <br/>
+          <FormGroup controlId="alreadyamember" bsSize="large">
+            <ControlLabel>Already a member? <a href=""><Link to="/signin">Sign In </Link></a></ControlLabel><br/><br/>
+            </FormGroup><br/>
         </form>
       </div>
     );
   }
 }
 
+export default Signup;

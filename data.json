@@ -2,19 +2,19 @@
     "data": [
         {
             "user": "ram",
-            "email-id": "ram123@r.com",
+            "email": "ram123@r.com",
             "password": "123456"
             
         },
         {
             "user": "prasanth",
-            "email-id": "prasi123@r.com",
+            "email": "prasi123@r.com",
             "password": "qwerty"
             
         },
         {
             "user": "prasi",
-            "email-id": "prasanth123@r.com",
+            "email": "prasanth123@r.com",
             "password": "qwe123"
             
         }

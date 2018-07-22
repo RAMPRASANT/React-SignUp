@@ -16,6 +16,24 @@ body {
   margin-left:15%;
   }
 
+.topline{
+
+  width: auto;
+  border:0.5px solid black;
+}
+
+.bottomline{
+
+  width: 100%;
+  border:1px solid black;
+}
+
+  .productimage{
+
+    float:right;
+    margin-top:-590px;
+    padding: 5%;
+  }
   @media(max-width:768px){
 
     body{
@@ -51,10 +69,14 @@ body {
     height:25px;
   }
 
-  .container{
+  .container-fluid{
 
-    margin-left:auto;
-    margin-top: 10%; 
+    border:1px solid black;
+    margin: auto;
+    max-width: 430px;
+    margin-top: 5%; 
+    
+    
   }
   .formstyle{
 
@@ -64,11 +86,11 @@ body {
   }
 
   @media all and (min-width: 480px) {
-    .container {
+    .container-fluid {
       padding: 60px 0;
     }
   
-    .container form {
+    .container-fluid form {
       margin: 0 auto;
       max-width: 320px;
     }
